@@ -1,0 +1,109 @@
+body {
+    background: rgb(124, 249, 197);
+    color: rgb(0, 0, 0);
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+img {
+    width: 450px; !important;
+    display: block;
+    margin: 20px auto;
+}
+
+button, input {
+    padding: 10px;
+    margin-top: 10px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#response {
+    margin-top: 20px;
+    min-height: 40px;
+}
+
+/* --- GLITCH EFFECT --- */
+.glitch {
+    animation: glitchAnim 0.2s infinite;
+}
+
+@keyframes glitchAnim {
+    0% {
+        transform: translate(0, 0);
+        filter: hue-rotate(0deg) contrast(1);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+        filter: hue-rotate(20deg) contrast(1.2);
+    }
+    40% {
+        transform: translate(2px, -2px);
+        filter: hue-rotate(-20deg) contrast(0.9);
+    }
+    60% {
+        transform: translate(-1px, 1px);
+    }
+    80% {
+        transform: translate(1px, -1px);
+        filter: contrast(1.4);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+#fakePrompt {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+
+    background: #fff;
+    color: #000;
+
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
+    padding: 12px 14px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    z-index: 1000;
+}
+
+#fakePrompt button {
+    margin-right: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#fakePrompt p {
+    margin: 0 0 10px 0;
+    font-size: 13px;
+}
+
+#fakePrompt button {
+    border: none;
+    background: none;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 6px 8px;
+}
+
+#fakePrompt button:first-of-type {
+    color: #1a73e8; /* Chrome blue */
+    font-weight: 500;
+}
+
+#fakePrompt button:last-of-type {
+    color: #5f6368; /* grey */
+}
+
+#fakePrompt button:hover {
+    background: rgba(0,0,0,0.05);
+    border-radius: 4px;
+}
